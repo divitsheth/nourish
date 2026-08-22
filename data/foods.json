@@ -1,0 +1,51 @@
+[
+  {
+    "id": "joe-vegan-avocado-sandwich",
+    "restaurant": "Joe & The Juice",
+    "name": "Vegan Avocado Sandwich",
+    "calories": 480,
+    "protein": 11,
+    "sodium": 490,
+    "quality": "estimate",
+    "source": "Published third-party nutrition; ingredient list cross-checked with Joe & The Juice.",
+    "notes": "Portion and regional menu can vary."
+  },
+  {
+    "id": "joe-trust-your-gut",
+    "restaurant": "Joe & The Juice",
+    "name": "Trust Your Gut (regular 16 oz)",
+    "calories": 325,
+    "calorieRange": "250–400",
+    "protein": 10,
+    "sodium": null,
+    "quality": "estimate",
+    "source": "Joe & The Juice ingredient list and regional protein listing.",
+    "notes": "U.S. calories and sodium panel unavailable."
+  },
+  {
+    "id": "kolapasi-madurai-malli-dosa",
+    "restaurant": "Kolapasi",
+    "name": "Madurai Malli Dosa",
+    "calories": 300,
+    "calorieRange": "250–350",
+    "protein": 6,
+    "proteinRange": "5–8",
+    "sodium": null,
+    "quality": "estimate",
+    "source": "Restaurant menu description; ingredient/portion-based estimate.",
+    "notes": "No restaurant nutrition panel published."
+  },
+  {
+    "id": "kolapasi-paneer-dosa",
+    "restaurant": "Kolapasi",
+    "name": "Paneer Dosa",
+    "calories": 500,
+    "calorieRange": "400–600",
+    "protein": 20,
+    "proteinRange": "15–25",
+    "sodium": null,
+    "quality": "estimate",
+    "source": "Comparable paneer dosa nutrition and typical dosa/paneer portions.",
+    "notes": "Not restaurant-confirmed."
+  }
+]
