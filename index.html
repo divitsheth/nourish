@@ -3,18 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Food Ledger</title>
+  <meta name="theme-color" content="#0f3d2e" />
+  <title>Nourish · Personal food ledger</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main>
-    <header><p class="eyebrow">PERSONAL NUTRITION LIBRARY</p><h1>Food Ledger</h1><p>Keep evidence-backed restaurant nutrition close at hand.</p></header>
-    <section class="summary" aria-label="Today's confirmed food log"><div><span>Calories</span><strong id="calories">0</strong></div><div><span>Protein</span><strong id="protein">0g</strong></div><div><span>Known sodium</span><strong id="sodium">0mg</strong></div></section>
-    <section class="toolbar"><label>Search<input id="search" type="search" placeholder="Restaurant or item" /></label><button id="clear" type="button">Clear today</button></section>
-    <p id="sodium-note" class="muted"></p>
-    <section id="food-list" class="food-list" aria-live="polite"></section>
+  <main class="shell">
+    <header class="hero">
+      <div class="brand-row"><div class="brand-mark" aria-hidden="true">✦</div><span class="brand-name">Nourish</span><span class="local-badge">Saved on this device</span></div>
+      <p class="eyebrow">PERSONAL NUTRITION LIBRARY</p>
+      <h1>Eat with <em>confidence.</em></h1>
+      <p class="intro">A calm, evidence-backed place to keep your go-to restaurant meals close at hand.</p>
+    </header>
+
+    <section class="dashboard" aria-label="Today's confirmed food log">
+      <div class="section-heading"><div><p class="eyebrow">TODAY</p><h2>Your food snapshot</h2></div><span id="logged-count" class="count-badge">0 foods logged</span></div>
+      <div class="summary-grid">
+        <div class="summary-card calories-card"><span class="metric-icon" aria-hidden="true">◒</span><span class="metric-label">Calories</span><strong id="calories">0</strong><small>kcal confirmed</small></div>
+        <div class="summary-card protein-card"><span class="metric-icon" aria-hidden="true">↗</span><span class="metric-label">Protein</span><strong id="protein">0g</strong><small>confirmed</small></div>
+        <div class="summary-card sodium-card"><span class="metric-icon" aria-hidden="true">≈</span><span class="metric-label">Known sodium</span><strong id="sodium">0mg</strong><small id="sodium-note">No items logged</small></div>
+      </div>
+    </section>
+
+    <section class="library" aria-labelledby="library-title">
+      <div class="library-heading"><div><p class="eyebrow">YOUR LIBRARY</p><h2 id="library-title">Find a favorite</h2></div><button id="clear" class="button button-quiet" type="button">Clear today</button></div>
+      <div class="controls"><label class="search-label" for="search"><span class="sr-only">Search your food library</span><span class="search-icon" aria-hidden="true">⌕</span><input id="search" type="search" autocomplete="off" placeholder="Search restaurants or dishes" /></label><span id="result-count" class="result-count" aria-live="polite"></span></div>
+      <div id="loading" class="state-card" role="status">Loading your food library…</div>
+      <div id="food-list" class="food-list" aria-live="polite"></div>
+      <div id="empty" class="state-card empty-state" hidden><div class="empty-icon" aria-hidden="true">⌕</div><h3>No meals found</h3><p>Try a different restaurant or dish.</p></div>
+    </section>
+    <p class="privacy-note">Your daily selections stay private in this browser. Nutrition values are based on the source shown on each meal.</p>
   </main>
-  <template id="food-template"><article class="food"><div class="food-heading"><div><p class="restaurant"></p><h2 class="name"></h2></div><label class="eat"><input type="checkbox"/> Ate this today</label></div><div class="macros"></div><p class="source"></p><p class="notes muted"></p></article></template>
+
+  <template id="food-template"><article class="food"><div class="food-heading"><div><p class="restaurant"></p><h3 class="name"></h3></div><label class="eat"><input class="eat-input" type="checkbox" /><span class="checkmark" aria-hidden="true">✓</span><span>Ate today</span></label></div><div class="macros"></div><div class="food-footer"><p class="source"></p><p class="notes muted"></p></div></article></template>
   <script type="module" src="app.js"></script>
 </body>
 </html>
